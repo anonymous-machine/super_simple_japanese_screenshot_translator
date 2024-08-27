@@ -1,6 +1,6 @@
 # How to use this code
 
-1. Install Ollama. Instructions are at available (here)[https://ollama.com/download/]
+1. Install Ollama. Instructions are at available [here](https://ollama.com/download/)
 
 2. Configure the file in the .env file. If you're using the default Ollama settings, the only thing you should need to change is the WATCHED\_PATH field
 3. Install the required dependencies
