@@ -1,0 +1,5 @@
+ollama
+torch
+python-dotenv
+Pillow
+transformers
