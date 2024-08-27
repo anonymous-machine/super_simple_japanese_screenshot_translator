@@ -1,3 +1,4 @@
+import time
 import os
 from pathlib import Path
 from typing import Union
@@ -88,7 +89,7 @@ def main_loop():
 		time.sleep(loop_delay)
 
 		# This block checks to see if a new most-recent file has appeared in the watched_path
-		files = get_files_by_recency(watch_path)
+		files = get_files_by_recency(watched_path)
 		if len(files) == 0:
 			continue	# I.e., if the folder is empty, do nothing
 		most_recent_file = files[0]
@@ -99,7 +100,7 @@ def main_loop():
 
 		last_seen_file = most_recent_file
 		ocr_text = ocr_manager.run(most_recent_file)
-		translation = ollama_manager.translate(ocr_test)
+		translation = ollama_manager.translate(ocr_text)
 		print(f"{ocr_text}: {translation}")
 
 if __name__ == '__main__':
